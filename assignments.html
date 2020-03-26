@@ -1,0 +1,247 @@
+<!--The resources page on the student interface.-->
+
+<html>
+<head>
+  <title>ELearner: COSC 3P94 Resources</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/assignments.css">
+  <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- The top header -->
+  <div id="top" class="navbar">
+    <a href="#"><img src="img/logo.png" alt="logo" style="margin-top: -5px; width: 100px;"/></a>
+    <div style="float: right">
+      <a class="nav_item">help</a>
+      <a class="nav_item">sign-out</a>
+      <div style="float: right">
+        <div id="dropbtn">
+          <button class="dropdown" onclick="hideOnClickOutside('dropmenu', 'dropbtn')"><img class="dropdown_img" src="img/user.png" alt="user" style="width: 27px; padding: 0;"/></button>
+          <div id="dropmenu" class="dropdown_content" style="display: none">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Nav bar divider -->
+  <div id="divider"></div>
+  <!-- The courses nav bar -->
+  <div id="courses" class="navbar">
+    <a href="dashboard.html" style="margin: -5px 10px"><button class="button btn_border"><img class="home_icon" src="img/home.png"/>HOME</button></a>
+    <a href="#"><button class="button btn_filled" style="margin: -5px -20px">COSC 3P94</button></a>
+    <div style="float: right">
+      <div id="coursebtn" class="course_btn_container" onclick="hideOnClickOutside('coursemenu', 'coursebtn')">
+        <img src="img/courses.png" class="btn_course_menu" alt="menu"/>
+        <div class="course_menu_overlay">
+          <a href="#">
+            <img src="img/courses_green.png" class="btn_course_menu_green" alt="menu"/>
+          </a>
+        </div>
+        <div id="coursemenu" class="course_menu_content" style="display: none">
+          <p class="course_menu_item">You are not enrolled in any other courses.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The page body-->
+  <div id="page_body">
+    <!-- The services nav bar -->
+    <div class="services column"> 
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="about.html"><img src="img/about.png" class="service_item" alt="about"/></a>
+          <div class="service_label">
+            <a href="#">About</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="announcements.html"><img src="img/announcements.png" class="service_item" alt="announcements"/></a>
+          <div class="service_label">
+            <a href="#">Announcements</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg active_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/resources.png" class="service_item active_service" alt="resources"/></a>
+          <div class="service_label">
+            <a href="#">Resources</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="to-do.html"><img src="img/to-do.png" class="service_item" alt="to-do"/></a>
+          <div class="service_label">
+            <a href="#">To-do</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="gradebook.html"><img src="img/gradebook.png" class="service_item" alt="gradebook"/></a>
+          <div class="service_label">
+            <a href="#">Gradebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="forums.html"><img src="img/forums.png" class="service_item" alt="forums"/></a>
+          <div class="service_label">
+            <a href="#">Forums</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The main display -->
+    <div class="display column">
+      <p class="page_title">Assignments</p>      
+      <div id="divider" style="background-color: #67C781;"></div>  
+      <div class="forum_left column" style="width: 24%;">
+        <div id="resbox1" class="folder" style="margin-top: 30px; background-color: #D5F5CD" onclick="toggleDisplayRes('resbox1', 'res1')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Assignment 1</p>
+          </div>
+        </div>
+        <div id="resbox2" class="folder" onclick="toggleDisplayRes('resbox2', 'res2')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Assignment 2</p>
+          </div>
+        </div>
+        <div id="resbox3" class="folder" onclick="toggleDisplayRes('resbox3', 'res3')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Assignment 3</p>
+          </div>
+        </div>
+        <div id="resbox4" class="folder" onclick="toggleDisplayRes('resbox4', 'res4')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Assignment 4</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="btn-group" style="margin-left: 30px;">
+            <button class="button">Add Assignment</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- The forum expanded display -->
+      <div class="res_right column" style="display: block; height: 21px;">
+        <!-- <div class="label_header" style="border-left: none;">File name</div> -->
+      </div>
+      
+      <div id="res1" class="res_right column" style=" display: block;">
+        <h3>Assignment 1</h3>
+        <p>file: <a href="#">Assign_1.pdf</a></p>
+        <div>
+          <form action="/action_page.php">
+            <label for="myfile">Select a pdf:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <input href="#" type="submit" value="upload pdf">
+          </form>
+        </div>
+        <p style="width: 60%; margin-top: 20px;">The following requirements detail the spirit of what is required for this stage. Although the 
+          listed requirements give the major sections, which need to be covered, it is the groups responsibility
+           to adequately expand each to a level appropriate for comprehensive assessment of the interface. Marks are 
+          not only allocated to fulfilling the stage requirements, but also for project quality and depth.</p>
+        <p>Due date: 3/25/2020</p>
+        <p>Created date: 3/05/2020</p>
+
+        <div class="btn-group">
+          <button class="button">Edit</button>
+          <button class="button">Delete</button>
+        </div>
+      
+      </div>
+      
+      <div id="res2" class="res_right column" style="display: none;">
+        <h3>Assignment 2</h3>
+        <p>file: <a href="#">Assign_2.pdf</a></p>
+        <div>
+          <form action="/action_page.php">
+            <label for="myfile">Select a pdf:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <input href="#" type="submit" value="upload pdf">
+          </form>
+        </div>
+        <p style="width: 60%; margin-top: 20px;">This assignment will focus on the design and implementation of a 
+          mock application, you may presume a platform of a PC (mac to), as well you can consider a mobile app 
+          although it is not a rquirement. The goal is to create a fully functional interface but devoid of any 
+          of the misgivings of previous systems and based on the research you conducted in stage 1. The idea of a 
+          mock interface it to be able to show what a functional system would or could look and act like without 
+          getting bogged down in technical issues. </p>
+        <p>Due date: 4/15/2020</p>
+        <p>Created date: 4/02/2020</p>
+
+        <div class="btn-group">
+          <button class="button">Edit</button>
+          <button class="button">Delete</button>
+        </div>
+      </div>
+      <div id="res3" class="res_right column" style="display: none;">
+        <h3>Assignment 3</h3>
+        <p>file: <a href="#">N/A</a></p>
+        <div>
+          <form action="/action_page.php">
+            <label for="myfile">Select a pdf:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <input href="#" type="submit" value="upload pdf">
+          </form>
+        </div>
+        <p style="width: 60%; margin-top: 20px;"></p>
+        <p>Due date: N/A</p>
+        <p>Created date: N/A</p>
+
+        <div class="btn-group">
+          <button class="button">Edit</button>
+          <button class="button">Delete</button>
+        </div>
+      </div>
+      <div id="res4" class="res_right column" style="display: none;">
+        <h3>Assignment 4</h3>
+        <p>file: <a href="#">N/A</a></p>
+        <div>
+          <form action="/action_page.php">
+            <label for="myfile">Select a pdf:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+            <input href="#" type="submit" value="upload pdf">
+          </form>
+        </div>
+        <p style="width: 60%; margin-top: 20px;"></p>
+        <p>Due date: N/A</p>
+        <p>Created date: N/A</p>
+
+        <div class="btn-group">
+          <button class="button">Edit</button>
+          <button class="button">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The footer -->
+  <div id="divider" style="width: 90%; margin: auto; margin-top: 31px;"></div>
+  <div id="footer">
+    Katie Lee, Wenjie Lin, Mutaz Fattal, Kushal Baral - COSC 3P94 - Stage 2
+  </div>
+  </body>
+</html>

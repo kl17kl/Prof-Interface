@@ -1,0 +1,243 @@
+<!--The resources page on the student interface.-->
+
+<html>
+<head>
+  <title>ELearner: COSC 3P94 Resources</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/tests.css">
+  <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- The top header -->
+  <div id="top" class="navbar">
+    <a href="#"><img src="img/logo.png" alt="logo" style="margin-top: -5px; width: 100px;"/></a>
+    <div style="float: right">
+      <a class="nav_item">help</a>
+      <a class="nav_item">sign-out</a>
+      <div style="float: right">
+        <div id="dropbtn">
+          <button class="dropdown" onclick="hideOnClickOutside('dropmenu', 'dropbtn')"><img class="dropdown_img" src="img/user.png" alt="user" style="width: 27px; padding: 0;"/></button>
+          <div id="dropmenu" class="dropdown_content" style="display: none">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Nav bar divider -->
+  <div id="divider"></div>
+  <!-- The courses nav bar -->
+  <div id="courses" class="navbar">
+    <a href="dashboard.html" style="margin: -5px 10px"><button class="button btn_border"><img class="home_icon" src="img/home.png"/>HOME</button></a>
+    <a href="#"><button class="button btn_filled" style="margin: -5px -20px">COSC 3P94</button></a>
+    <div style="float: right">
+      <div id="coursebtn" class="course_btn_container" onclick="hideOnClickOutside('coursemenu', 'coursebtn')">
+        <img src="img/courses.png" class="btn_course_menu" alt="menu"/>
+        <div class="course_menu_overlay">
+          <a href="#">
+            <img src="img/courses_green.png" class="btn_course_menu_green" alt="menu"/>
+          </a>
+        </div>
+        <div id="coursemenu" class="course_menu_content" style="display: none">
+          <p class="course_menu_item">You are not enrolled in any other courses.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The page body-->
+  <div id="page_body">
+    <!-- The services nav bar -->
+    <div class="services column"> 
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="about.html"><img src="img/about.png" class="service_item" alt="about"/></a>
+          <div class="service_label">
+            <a href="#">About</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="announcements.html"><img src="img/announcements.png" class="service_item" alt="announcements"/></a>
+          <div class="service_label">
+            <a href="#">Announcements</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg active_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/resources.png" class="service_item active_service" alt="resources"/></a>
+          <div class="service_label">
+            <a href="#">Resources</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="to-do.html"><img src="img/to-do.png" class="service_item" alt="to-do"/></a>
+          <div class="service_label">
+            <a href="#">To-do</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="gradebook.html"><img src="img/gradebook.png" class="service_item" alt="gradebook"/></a>
+          <div class="service_label">
+            <a href="#">Gradebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="forums.html"><img src="img/forums.png" class="service_item" alt="forums"/></a>
+          <div class="service_label">
+            <a href="#">Forums</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The main display -->
+    <div class="display column">
+      <p class="page_title">Tests & Quizzes</p>      
+      <div id="divider" style="background-color: #67C781;"></div>  
+      <div class="forum_left column" style="width: 24%;">
+        <div id="resbox1" class="folder" style="margin-top: 30px; background-color: #D5F5CD" onclick="toggleDisplayRes('resbox1', 'res1')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Midterm 1</p>
+          </div>
+        </div>
+        <div id="resbox2" class="folder" onclick="toggleDisplayRes('resbox2', 'res2')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Quiz 2</p>
+          </div>
+        </div>
+        <div id="resbox3" class="folder" onclick="toggleDisplayRes('resbox3', 'res3')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Deleted*</p>
+          </div>
+        </div>
+        <div id="resbox4" class="folder" onclick="toggleDisplayRes('resbox4', 'res4')">
+          <div class="column">
+            <img src="img/folder.png" style="width: 17px; margin-top: -3px;"/>
+          </div>
+          <div class="column">
+            <p class="folder_name">Deleted*</p>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="btn-group" style="margin-left: 30px;">
+            <button class="button">Add</button>
+            <button class="button">Delete</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- The forum expanded display -->
+      <div class="res_right column" style="display: block; height: 21px;">
+        <!-- <div class="label_header" style="border-left: none;">File name</div> -->
+      </div>
+      
+      <div id="res1" class="res_right column" style=" display: block;">
+        
+        <h3 style="color: #72c493; font-size: 20px;">Midterm 1</h3>
+        <div class="topdiv">
+          <p>questions: 30</p>
+          <p>time: 2 hours</p>
+          <p>open: 10:00 AM 30/3/2020</p>
+          <p>close: 11:55 PM 30/3/2020</p>
+          <button class="button">edit</button>
+        </div>
+        <div class="botdiv">
+          <p style="color: black; font-size: 15px;">Questions 1</p>
+          <p>What is CCT</p>
+          <div style="margin-left: 15px;">
+            <p>Correlated Colour Temperature</p>
+            <p>Cognitive Complexity Theory</p>
+            <p>A method of organization</p>
+            <p>none of the above</p>
+          </div>
+          <button class="button">edit</button>
+          <p>...</p>
+          <p style="color: black;  font-size: 15px;">Questions 30</p>
+          <p>download and complete this file: <a href="#">coffee-hta.vtf</a></p>
+          <div style="margin-left: 15px;">
+            <p>when completed, upload</p>
+            <form action="/action_page.php">
+              <label for="myfile">Select a vtf:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+              <input href="#" type="submit" value="upload vtf">
+            </form>
+          </div>
+          <button class="button">edit</button>
+        </div>
+      
+      </div>
+      
+      <div id="res2" class="res_right column" style="display: none;">
+        
+        <h3 style="color: #72c493; font-size: 20px;">Quiz 2</h3>
+        <div class="topdiv">
+          <p>questions: 10</p>
+          <p>time: 30 minutes</p>
+          <p>open: 5:00 PM 04/4/2020</p>
+          <p>close: 7:00 PM 04/4/2020</p>
+          <button class="button">edit</button>
+        </div>
+        <div class="botdiv">
+          <p style="color: black; font-size: 15px;">Questions 1</p>
+          <p>What is the Principle of feedback</p>
+          <div style="margin-left: 15px;">
+            <p>Understanding world output</p>
+            <p>Gulf of execution</p>
+            <p>Principles of giving effective and only effective feedback</p>
+            <p>none of the above</p>
+          </div>
+          <button class="button">edit</button>
+         
+          <p style="color: black;  font-size: 15px;">Questions 2</p>
+          <p>What is CCT</p>
+          <div style="margin-left: 15px;">
+            <p>Correlated Colour Temperature</p>
+            <p>Cognitive Complexity Theory</p>
+            <p>A method of organization</p>
+            <p>none of the above</p>
+          </div>
+          <button class="button">edit</button>
+          <p>...</p>
+        </div>
+
+      </div>
+      
+      <div id="res3" class="res_right column" style="display: none;">
+       
+      
+      </div>
+
+      <div id="res4" class="res_right column" style="display: none;">
+       
+        
+      </div>
+
+    </div>
+  </div>
+  <!-- The footer -->
+  <div id="divider" style="width: 90%; margin: auto; margin-top: 31px;"></div>
+  <div id="footer">
+    Katie Lee, Wenjie Lin, Mutaz Fattal, Kushal Baral - COSC 3P94 - Stage 2
+  </div>
+  </body>
+</html>

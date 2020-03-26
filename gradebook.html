@@ -1,0 +1,227 @@
+<!--The resources page on the student interface.-->
+
+<html>
+<head>
+  <title>ELearner: COSC 3P94 Gradebook</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/gradebook.css">
+  <script type="text/javascript" src="scripts/main.js"></script>
+</head>
+<body>
+  <!-- The top header -->
+  <div id="top" class="navbar">
+    <a href="#"><img src="img/logo.png" alt="logo" style="margin-top: -5px; width: 100px;"/></a>
+    <a style="font-size: 16px; margin: -6.5px 0 0 -19px; color: rgb(230, 230, 230);">- Instructor</a>
+    <div style="float: right">
+      <a class="nav_item">help</a>
+      <a style="margin: -6px 5px 0 -8px;"><button class="button btn_filled" style="font-size: 12px;">View Site As: </button></a>
+      <img src="img/alert.png" alt="logo" style="margin: 5px 8px 0 0; width: 28px; cursor:pointer;"/>
+      <div style="float: right">
+        <div id="dropbtn">
+          <button class="dropdown" onclick="hideOnClickOutside('dropmenu', 'dropbtn')"><img class="dropdown_img" src="img/bockus.png" alt="user" style="width: 27px; padding: 0;"/></button>
+          <div id="dropmenu" class="dropdown_content" style="display: none">
+            <a href="#">Profile</a>
+            <a href="#">Settings</a>
+            <a href="#" style="color: rgb(192, 111, 111);">Sign-out</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Nav bar divider -->
+  <div id="divider"></div>
+  <!-- The courses nav bar -->
+  <div id="courses" class="navbar">
+    <a href="dashboard.html" style="margin: -5px 10px">
+        <button class="button btn_border" style="background-color: rgb(63, 63, 63); border: 1px solid rgb(63, 63, 63); color: rgb(230, 230, 230);">
+            <img class="home_icon" src="img/home.png"/>HOME
+        </button>
+    </a>
+    <a href="#"><button class="button btn_filled" style="margin: -5px -20px">COSC 3P94</button></a>
+    <div style="float: right">
+      <div id="coursebtn" class="course_btn_container" onclick="hideOnClickOutside('coursemenu', 'coursebtn')">
+        <img src="img/courses.png" class="btn_course_menu" alt="menu"/>
+        <div class="course_menu_overlay">
+          <a href="#">
+            <img src="img/courses_green.png" class="btn_course_menu_green" alt="menu"/>
+          </a>
+        </div>
+        <div id="coursemenu" class="course_menu_content" style="display: none">
+          <p class="course_menu_item">You are not managing any other courses.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- The page body-->
+  <div id="page_body">
+    <!-- The services nav bar -->
+    <div class="services column"> 
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <!-- Dashboard page-->
+          <a href="#"><img src="img/menu.png" class="service_item" alt="about"/></a> 
+          <div class="service_label">
+            <a href="#">Menu</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/announcements.png" class="service_item" alt="announcements"/></a>
+          <div class="service_label">
+            <a href="#">Announcements</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/resources.png" class="service_item" alt="resources"/></a>
+          <div class="service_label">
+            <a href="#">Resources</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/to-do.png" class="service_item" alt="to-do"/></a>
+          <div class="service_label">
+            <a href="#">To-do</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg active_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/gradebook.png" class="service_item active_service" alt="gradebook"/></a>
+          <div class="service_label">
+            <a href="#">Gradebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="service_item_bkg">
+        <div class="service_container">
+          <a href="#"><img src="img/forums.png" class="service_item" alt="forums"/></a>
+          <div class="service_label">
+            <a href="#">Forums</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The main display -->
+    <div class="display column">
+        <div style="width: 100%; height: 48px;">
+            <div class="column">
+                <img src="img/gradebook.png" style="width: 23px; padding: 12px; margin-left: 5px;"/>
+            </div>
+            <div class="column">
+                <p class="page_title" style="padding-top: 2px; margin-left: -2px;">Gradebook</p>   
+            </div>
+        </div>
+        <!-- The tabs -->
+        <div style="width: 95%; margin: auto;">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'viewtab')">View</button>
+                <button class="tablinks" onclick="openTab(event, 'permtab')">Permissions</button>
+            </div>
+            <div id="viewtab" style="display: block;" class="tabcontent">
+                <div class="spacebar">
+                    <button class="button btn_border_green">Add Gradebook Item</button>
+                    <button class="button btn_border_green" style="padding: 4px 10px; vertical-align:bottom; margin-left: 3px";><img src="img/resources.png" alt="New Folder" style="width: 17px;"/>+</button>
+                    <button class="button btn_border_grey" style="float: right;">Export/Import Item</button>
+                </div>
+                <div class="spacebar" style="margin-top: 10px;">
+                    <button class="opt_button" style="border-radius: 5px 0 0 5px; margin-left: 0px;">Move</button>
+                    <button class="opt_button">Edit</button>
+                    <button class="opt_button" style="border-radius: 0 5px 5px 0;">Delete</button>
+                </div>
+                <table style="margin-top: 24px;">
+                    <tr>
+                      <th style="padding: 8px">Gradebook Item</th>
+                      <th style="padding: 8px">Total Marks</th>
+                      <th style="padding: 8px">Weight</th>
+                      <th style="padding: 8px">Post Date</th>
+                      <th style="padding: 8px">Due Date</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" style="margin: 5px 10px 0 0; vertical-align: bottom;">Assignment 1</td>
+                        <td>20</td>
+                        <td>10%</td>
+                        <td>Mar 12 @12:00pm</td>
+                        <td>Mar 27 @11:59pm</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" style="margin: 5px 10px 0 0; vertical-align: bottom;">Quiz 1</td>
+                        <td>10</td>
+                        <td>5%</td>
+                        <td>Feb 15 @2:00pm</td>
+                        <td>Feb 27 @5:00pm</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" style="margin: 5px 10px 0 0; vertical-align: bottom;">Quiz 2</td>
+                        <td>10</td>
+                        <td>7%</td>
+                        <td>Mar 4 @1:30pm</td>
+                        <td>Mar 19 @5:00pm</td>
+                    </tr>
+                  </table>
+        
+            </div>
+            <div id="permtab" class="tabcontent">
+                <h3>Permissions</h3>
+                <p>Set permissions for Gradebook in COSC 3P94.</p> 
+                <div class="spacebar" style="padding-bottom: 15px;">
+                    <button class="button btn_border_green">Undo Changes</button>
+                </div>
+                <table style="width: 55%; margin: 0;">
+                    <tr>
+                        <th style="padding: 8px">Permission</th>
+                        <th style="padding: 8px">Instructor</th>
+                        <th style="padding: 8px">Student</th>
+                        <th style="padding: 8px">Teaching Assistant</th>
+                      </tr>
+                      <tr>
+                          <td>Read Gradebook Items</td>
+                          <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                          <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                          <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                      </tr>
+                      <tr>
+                        <td>Create Gradebook Items</td>
+                        <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                        <td><input type="checkbox" style="margin-left: 30px;"></td>
+                        <td><input type="checkbox" style="margin-left: 30px;"></td>
+                    </tr>
+                    <tr>
+                      <td>Delete Gradebook Items</td>
+                      <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                      <td><input type="checkbox" style="margin-left: 30px;"></td>
+                      <td><input type="checkbox" style="margin-left: 30px;"></td>
+                  </tr>
+                  <tr>
+                    <td>Edit Gradebook Items</td>
+                    <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                    <td><input type="checkbox" style="margin-left: 30px;"></td>
+                    <td><input type="checkbox" style="margin-left: 30px;"></td>
+                </tr>
+                <tr>
+                  <td>Access all Gradebook Items</td>
+                  <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+                  <td><input type="checkbox" style="margin-left: 30px;"></td>
+                  <td><input type="checkbox" style="margin-left: 30px;" checked="checkbox"></td>
+              </tr>
+                </table>
+            </div>
+        </div>
+
+      <div>
+      </div>
+    </div>
+  </div>
+  <!-- The footer -->
+  <div id="divider" style="width: 90%; margin: auto; margin-top: 31px;"></div>
+  <div id="footer">
+    Katie Lee, Wenjie Lin, Mutaz Fattal, Kushal Baral - COSC 3P94 - Stage 2
+  </div>
+  </body>
+</html>
