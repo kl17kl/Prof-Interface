@@ -1,0 +1,87 @@
+/* Resources Page Styles - resources.css */
+.res_right {
+    width: 76%;
+}
+.folder {
+    width: 65%;
+    height: 10px;
+    border: 1px solid #67C781;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0 15px 30px;
+    cursor: pointer;
+}
+.folder:hover{
+    background-color: rgb(236, 236, 236);
+}
+.folder_name {
+    margin-top: -3px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: black;
+}
+.label_header {
+    margin-top: 15px;
+    width: 150px;
+    height: 30px;
+    float: left;
+    text-align: center;
+    color: grey;
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+.resource {
+    border-bottom: 0.5px solid rgb(179, 179, 179);
+    margin-top: 14px;
+    width: 98.5%;
+    height: 30px;
+    overflow: hidden;
+}
+a:link {
+    text-decoration: none;
+    color: grey;
+}
+a:link:hover {
+    color: #67C781;
+}
+a:visited {
+    color: rgb(97, 89, 129);
+}
+a:visited:hover {
+    color: #67C781;    
+}
+.resource_detail {
+    float: left;
+    text-align: center;
+    font-size: 14px;
+}  
+
+.btn-group .button {
+    border: 2px solid #67C781; 
+    margin-right: 10px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+  }
+
+  .button:hover {
+      background-color: #90ee90;
+  }
+
+  .topdiv {
+      border-bottom: 1px solid #e8e8e8;
+      padding-bottom: 15px;
+  }
+
+  #resbox3 {
+      display: none;
+  }
+
+  #resbox4 {
+    display: none;
+  }
+

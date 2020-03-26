@@ -1,0 +1,90 @@
+/* The gradebook page for the profressor interface */
+.tab {
+    overflow: hidden;
+    border-bottom: 0.5px solid #ccc;
+}
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: 0.5px solid #ccc;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: 0.3s;
+    font-size: 14px;
+    color: rgb(94, 94, 94);
+}
+.tab button:hover {
+    background-color: rgb(236, 236, 236);
+}
+.tab button.active {
+    color: rgb(43, 43, 43);
+    border-top: 2px solid #67C781;
+    margin-bottom: -5px;
+}
+.tabcontent {
+    display: none;
+    margin: 0;
+    border-top: none;
+}
+
+/* The buttons container */
+.spacebar {
+    height: 35px; 
+    margin: auto; 
+    margin-top: 20px;
+}
+.btn_border_green {
+    border: 1px solid #67C781;
+    padding: 6px 18px;
+    background-color: transparent;
+    color: rgb(88, 88, 88);
+}
+.btn_border_green:hover {
+    transition-duration: 0.3s;
+    transform: scale(.98);
+    color: rgb(54, 54, 54);
+}
+.btn_border_grey {
+    padding: 6px 18px;
+    border: 1px solid rgb(158, 158, 158);
+    background-color: transparent;
+    color: rgb(88, 88, 88);
+}
+.btn_border_grey:hover {
+    transition-duration: 0.3s;
+    transform: scale(.98);
+    color: rgb(54, 54, 54);
+}
+.opt_button {
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    padding: 9px 18px;
+    margin-left: -6px;
+    color: rgb(134, 134, 134);
+}
+.opt_button:hover {
+    transition-duration: 0s;
+    transform: scale(.98);
+    color: rgb(87, 87, 87);
+}
+/* The table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+th, td {
+    font-size: 13px;
+    text-align: left;
+    padding: 13px 8px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+th {
+    background-color: #67C781;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+}
